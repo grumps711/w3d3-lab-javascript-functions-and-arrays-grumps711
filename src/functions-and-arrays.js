@@ -19,7 +19,8 @@ function findLongestWord(words) {
       if(arrItem.length > longestword.length){
         longestword=arrItem;
       }
-    })
+  })
+
   return longestword;
 }
 
@@ -44,9 +45,22 @@ function sumNumbers(array) {
   return total;
 }
 
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
-// Iteration #3.1 Bonus:
-function sum() {}
+// Iteration #3.2 Bonus:
+function sum(array) {
+
+  let total =0;
+
+  array.forEach(
+    function(arrItem){
+      total += arrItem.length;
+    }
+
+  )
+return total
+
+}
 
 
 // Iteration #4: Calculate the average
@@ -54,19 +68,8 @@ function sum() {}
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(array) {
-
-  let total = 0;
-  let avg = 0;
-
   if(array.length===0){return null;}
-
-  array.forEach(function(arrItem){
-    total+=arrItem;
-  })
-
-  avg = total / array.length;
-  
-  return avg;
+  return sumNumbers(array) / array.length;
 }
 
 
