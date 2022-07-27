@@ -87,13 +87,6 @@ function avg() {}
 
 
 
-
-
-
-
-
-
-
 // Iteration #5: Unique arrays
 const wordsUnique = [
   'crab',
@@ -137,13 +130,16 @@ function uniquifyArray(wordsArray) {
 
 
 
-
-
-
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordsArray,wordToSearch) {
+
+  if(wordsArray.length == 0){return null;}
+
+  if(wordsArray.includes(wordToSearch)){return true;}
+  else return false;
+}
 
 
 
@@ -162,7 +158,18 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordsArray,wordToSearch) {
+
+  let repeat_count = 0;
+
+  for (let i = 0; i < wordsArray.length; i++) {
+    if (wordsArray[i] === wordToSearch) {
+      repeat_count++;
+    }
+  }
+
+  return repeat_count; //number of times wordToSearch appears in wordsArray
+}
 
 
 
@@ -190,7 +197,11 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct() {
+
+  
+
+}
 
 
 
