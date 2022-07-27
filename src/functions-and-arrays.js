@@ -32,10 +32,10 @@ function sumNumbers(array) {
 
   let total=0;
 
-  array.forEach(function(arrItem){
-      total+=arrItem;
+  array.forEach(function hola (arrItem){
+    total+=arrItem;
   })
-  
+
   /*
   ***Opcion2
   for(let i=0; i<array.length; i++){
@@ -74,12 +74,25 @@ function averageNumbers(array) {
 
 
 // Level 2: Array of strings
+
+
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 function averageWordLength() { }
 
+
 // Bonus - Iteration #4.1
 function avg() {}
+
+
+
+
+
+
+
+
+
+
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -96,7 +109,34 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(wordsArray) {
+  
+
+  if(wordsArray.length == 0){return null;}
+
+  /** Con .filter() y .indexOf() */
+
+  let newArrayWords = wordsArray.filter((word, index) => {
+    return wordsArray.indexOf(word) === index;
+  });
+
+  return newArrayWords;
+
+
+
+  /**Con .reduce() y includes()  */
+
+  /**
+   * let newArrayWords = wordsArray.reduce((result, word) => {
+      return result.includes(word) ? result : [...result, word];
+  }, []);
+
+  return newArrayWords; */
+    
+}
+
+
+
 
 
 
