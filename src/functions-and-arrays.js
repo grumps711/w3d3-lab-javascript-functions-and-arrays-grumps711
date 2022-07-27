@@ -32,7 +32,7 @@ function sumNumbers(array) {
 
   let total=0;
 
-  array.forEach(function hola (arrItem){
+  array.forEach(function(arrItem){
     total+=arrItem;
   })
 
@@ -45,7 +45,7 @@ function sumNumbers(array) {
   return total;
 }
 
-const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
 
 // Iteration #3.2 Bonus:
 function sum(array) {
@@ -64,7 +64,7 @@ return total
 
 
 // Iteration #4: Calculate the average
-// Level 1: Array of numbers
+// Level 4.1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(array) {
@@ -73,16 +73,38 @@ function averageNumbers(array) {
 }
 
 
-// Level 2: Array of strings
+// Level 4.2: Array of strings
 
 
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(wordsArr) {
 
+  if(wordsArr.length===0){return null;}
+  let count=0,lengthsum=0;
 
-// Bonus - Iteration #4.1
-function avg() {}
+  for(let i=0 ; i<wordsArr.length; i++){
+    count++;
+    lengthsum+=wordsArr[i].length;
+  }
+  return lengthsum/count;
+}
+
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+// Bonus - Iteration #4.3
+function avg(arr) {
+  let count = 0,totallength=0;
+  for(let i=0 ; i<arr.length; i++){
+    count++
+    if(arr[i]===true){totallength+=1; continue;}
+    else if (arr[i]===false){totallength+=0; continue;}
+    else if(typeof arr[i] === 'string'){totallength+=arr[i].length; continue;}
+    else {totallength+=arr[i];continue;}
+  }
+  if(arr.length===0){return null;}
+  return totallength/count;
+
+}
 
 
 
@@ -197,9 +219,8 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {
+function greatestProduct(matrix) {
 
-  
 
 }
 
